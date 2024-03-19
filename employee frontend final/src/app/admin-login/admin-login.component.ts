@@ -7,15 +7,15 @@ import { Router } from '@angular/router';
   styleUrls: ['./admin-login.component.css']
 })
 export class AdminLoginComponent {
-  email: string = 'admin@gmail.com';
-  password: string = 'admin123';
+  email: string = '';
+  password: string = '';
   loginError: boolean = false;
 
   constructor(private router: Router) {}
 
   onLogin(): void {
-    // Validate credentials (replace this with your actual authentication logic)
-    if (this.email == 'admin@gmail.com' && this.password == 'admin123') {
+    // Validate credentials
+    if (this.email === 'admin@gmail.com' && this.password === 'admin@123') {
       // Redirect to admin dashboard
       this.router.navigate(['/add-employee']);
     } else {
